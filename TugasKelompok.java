@@ -45,7 +45,7 @@ public class TugasKelompok {
         String lanjut;
         int jmlSks = 0, sksTotal = 0;
 
-        System.out.println("--- Tambah Data KRS ---");
+        System.out.println("\n--- Tambah Data KRS ---");
         System.out.print("Nama Mahasiswa : ");
         String inpnama = input.nextLine();
         System.out.print("NIM : ");
@@ -95,17 +95,21 @@ public class TugasKelompok {
         for(int a = 0; a < nim.length; a++){
             if(nim[a] == search){
                 index = a;
+                System.out.printf("%-10s %-15s %-10s %-25s %-5s\n", "NIM", "Nama", "Kode MK", "Nama Mata Kuliah", "SKS");
+                for(int i = 0; i < dataMahasiswa[0].length; i++){
+                    if(dataMahasiswa[index][i] != 0){
+                        System.out.printf("%-10s %-15s %-10s %-25s %-5d\n",
+                        nim[index],
+                        nama[index],
+                        arrkode[index][i],
+                        arrmatkul[index][i],
+                        dataMahasiswa[index][i]);
+
+                    }
+                }
             }
         }
-
-        System.out.println("NIM\tNAMA\tKODE\tMATKUL\tSKS");
-        for(int i = 0; i < dataMahasiswa[0].length; i++){
-            if(dataMahasiswa[index][i] != 0){
-                System.out.print(nim[index] + "\t" + nama[index] + "\t" + arrkode[index][i]  + "\t" + arrmatkul[index][i] + "\t" +  dataMahasiswa[index][i]);
-                System.out.println();
-            }
-        }
-
+        System.out.println("Total SKS : " + totalSks[index]);
 
     }
 
