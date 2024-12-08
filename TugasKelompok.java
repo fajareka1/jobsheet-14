@@ -26,6 +26,9 @@ public class TugasKelompok {
             }else if(pilihan == 4){
                 System.out.println("Terimakasih !!!!");
                 break;
+            }else{
+                System.out.println("Pilihan menu tidak tersedia !!!");
+                continue;
             }
         }
 
@@ -38,6 +41,7 @@ public class TugasKelompok {
         System.out.println("3. Analisis Data KRS");
         System.out.println("4. Keluar");
     }
+    
     static void tambahData(int index){
         Scanner input = new Scanner(System.in);
         Scanner input2 = new Scanner(System.in);
